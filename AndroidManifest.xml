@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="15"
         android:targetSdkVersion="21" />
 
     <application
@@ -13,6 +13,11 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <provider
+            android:name=".contentprovider.ProductListContentProvider"
+            android:authorities="pl.trou.shoplist.contentprovider" >
+        </provider>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
@@ -28,6 +33,10 @@
         </activity>
         <activity
             android:name=".ProductListActivity"
+            android:label="@string/title_activity_product_list" >
+        </activity>
+        <activity
+            android:name=".ProductEditActivity"
             android:label="@string/title_activity_product_list" >
         </activity>
     </application>
